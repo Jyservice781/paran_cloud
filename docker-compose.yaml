@@ -1,0 +1,34 @@
+version: '3'
+services:
+  eureka-server:
+    build: ./server/eureka-server
+    ports:
+      - "8761:8761"
+  gateway-server:
+    build: ./server/gateway-server
+    ports:
+      - "8000:8000"
+  file-service:
+    build: ./service/file-service
+    ports:
+      - "8081:8081"
+  comment-service:
+    build: ./service/comment-service
+    ports:
+      - "8082:8082"
+  user-service:
+    build: ./service/user-service
+    ports:
+      - "8083:8083"
+  chat-service:
+    build: ./service/chat-service
+    ports:
+      - "8084:8084"
+  room-service:
+    build: ./service/room-service
+    ports:
+      - "8085:8085"
+  group-service:
+    build: ./service/group-service
+    ports:
+      - "8086:8086"
